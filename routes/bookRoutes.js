@@ -43,8 +43,7 @@ router.get("/", async (req, res) => {
             res.status(500).json({message: "can not find books"})
         }
         res.status(201).json({
-            count: books.length,
-            data: books
+            books: books
         })
     } catch (error) {
         console.log(error);
